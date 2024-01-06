@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showHome()">Home</a>
+        <a href="#" onclick="showAbout()">About</a>
+        <a href="#" onclick="showDoctor()">Doctor</a>
+        <a href="#" onclick="showAppointment()">Appointment</a>
+    </nav>
+    <section id="home">
+        <h2>Welcome to our Hospital!</h2>
+        <p>This is the home section of the Hospital Management System.</p>
+    </section>
+    <section id="about" style="display: none;">
+        <h2>About Us</h2>
+        <p>This is the about section of the Hospital Management System.</p>
+    </section>
+    <section id="doctor" style="display: none;">
+        <h2>Doctors</h2>
+        <p>This is the doctor section of the Hospital Management System.</p>
+    </section>
+    <section id="appointment" style="display: none;">
+        <h2>Appointments</h2>
+        <p>This is the appointment section of the Hospital Management System.</p>
+    </section>
+
+    <script>
+        function showHome() {
+            hideAllSections();
+            document.getElementById("home").style.display = "block";
+        }
+
+        function showAbout() {
+            hideAllSections();
+            document.getElementById("about").style.display = "block";
+        }
+
+        function showDoctor() {
+            hideAllSections();
+            document.getElementById("doctor").style.display = "block";
+        }
+
+        function showAppointment() {
+            hideAllSections();
+            document.getElementById("appointment").style.display = "block";
+        }
+
+        function hideAllSections() {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("about").style.display = "none";
+            document.getElementById("doctor").style.display = "none";
+            document.getElementById("appointment").style.display = "none";
+        }
+    </script>
+</body>
+</html>
